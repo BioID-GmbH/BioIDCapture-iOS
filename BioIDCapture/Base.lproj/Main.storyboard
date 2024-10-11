@@ -1,0 +1,532 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OR4-Od-ygr">
+    <device id="retina6_0" orientation="landscape" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Capture View Controller-->
+        <scene sceneID="3ho-ZO-rbM">
+            <objects>
+                <viewController storyboardIdentifier="CaptureViewController" id="1Id-4u-aFO" userLabel="Capture View Controller" customClass="BioIDCaptureViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gBK-Fr-O6Y" userLabel="Preview View">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Ugu-qv-aur"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="previewView" destination="gBK-Fr-O6Y" id="6cY-gT-xop"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gL5-Og-GpC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1689" y="1697"/>
+        </scene>
+        <!--Passive-->
+        <scene sceneID="4Dh-VC-gIS">
+            <objects>
+                <viewController id="jk0-XR-47Q" userLabel="Passive" customClass="PassiveViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dze-bU-nRg">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Passive Liveness Detection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIH-7e-4ac" userLabel="Passive Liveness Detection">
+                                <rect key="frame" x="47" y="0.0" width="750" height="45"/>
+                                <color key="backgroundColor" name="BioIDBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="2tW-hd-nsn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ju-qn-OlC">
+                                <rect key="frame" x="67" y="100" width="710" height="103"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">The Passive Liveness Detection uses only a single image. Due to the limitation to a single image, only the texture based liveness detection can be used to make a decision.</string>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LDO-HL-2of" userLabel="Image Viewer">
+                                <rect key="frame" x="67" y="63" width="710" height="140"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V87-9q-Vzq" userLabel="CaptureButton">
+                                <rect key="frame" x="67" y="224" width="710" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Ffg-in-a5C"/>
+                                </constraints>
+                                <state key="normal" title="Capture photo"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Capture photo">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="baseBackgroundColor" name="BioIDBlue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="capturePhoto:" destination="Ydd-dl-xaO" eventType="touchUpInside" id="7xc-Yr-zgD"/>
+                                    <action selector="capturePhoto:" destination="jk0-XR-47Q" eventType="touchUpInside" id="hTp-nN-Im4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eY3-MW-0c9" userLabel="ProcessButton">
+                                <rect key="frame" x="67" y="287" width="710" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="uVb-yi-8UB"/>
+                                </constraints>
+                                <state key="normal" title="Process"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Process">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" name="BioIDBlue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="process:" destination="jk0-XR-47Q" eventType="touchUpInside" id="RnM-Ga-KzX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZeL-1K-RLZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZeL-1K-RLZ" firstAttribute="trailing" secondItem="LDO-HL-2of" secondAttribute="trailing" constant="20" id="09h-L0-QMe"/>
+                            <constraint firstItem="jIH-7e-4ac" firstAttribute="leading" secondItem="ZeL-1K-RLZ" secondAttribute="leading" id="6YJ-0j-VcF"/>
+                            <constraint firstItem="ZeL-1K-RLZ" firstAttribute="trailing" secondItem="1Ju-qn-OlC" secondAttribute="trailing" constant="20" id="7VG-Eq-1ng"/>
+                            <constraint firstItem="1Ju-qn-OlC" firstAttribute="top" secondItem="ZeL-1K-RLZ" secondAttribute="top" constant="100" id="FJB-cI-weH"/>
+                            <constraint firstItem="ZeL-1K-RLZ" firstAttribute="bottom" secondItem="LDO-HL-2of" secondAttribute="bottom" constant="134" id="Ije-JJ-LjQ"/>
+                            <constraint firstItem="ZeL-1K-RLZ" firstAttribute="bottom" secondItem="1Ju-qn-OlC" secondAttribute="bottom" constant="134" id="JEj-FN-y3O"/>
+                            <constraint firstItem="V87-9q-Vzq" firstAttribute="leading" secondItem="ZeL-1K-RLZ" secondAttribute="leading" constant="20" id="JKA-ya-bFa"/>
+                            <constraint firstItem="ZeL-1K-RLZ" firstAttribute="trailing" secondItem="eY3-MW-0c9" secondAttribute="trailing" constant="20" id="N3B-uD-YTA"/>
+                            <constraint firstItem="eY3-MW-0c9" firstAttribute="bottom" secondItem="ZeL-1K-RLZ" secondAttribute="bottom" id="Q2o-kY-qXq"/>
+                            <constraint firstItem="eY3-MW-0c9" firstAttribute="leading" secondItem="ZeL-1K-RLZ" secondAttribute="leading" constant="20" id="RMs-Rd-8XO"/>
+                            <constraint firstItem="ZeL-1K-RLZ" firstAttribute="bottom" secondItem="V87-9q-Vzq" secondAttribute="bottom" constant="63" id="Vzj-E2-3t2"/>
+                            <constraint firstItem="jIH-7e-4ac" firstAttribute="top" secondItem="ZeL-1K-RLZ" secondAttribute="top" id="Z2s-dI-uSf"/>
+                            <constraint firstItem="1Ju-qn-OlC" firstAttribute="leading" secondItem="ZeL-1K-RLZ" secondAttribute="leading" constant="20" id="eie-tu-3BO"/>
+                            <constraint firstItem="ZeL-1K-RLZ" firstAttribute="trailing" secondItem="V87-9q-Vzq" secondAttribute="trailing" constant="20" id="ioy-6X-twC"/>
+                            <constraint firstItem="jIH-7e-4ac" firstAttribute="centerX" secondItem="ZeL-1K-RLZ" secondAttribute="centerX" id="lPL-jQ-v1v"/>
+                            <constraint firstItem="LDO-HL-2of" firstAttribute="top" secondItem="ZeL-1K-RLZ" secondAttribute="top" constant="63" id="oqw-wM-gS3"/>
+                            <constraint firstItem="LDO-HL-2of" firstAttribute="leading" secondItem="ZeL-1K-RLZ" secondAttribute="leading" constant="20" id="pt3-2k-gUo"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Passive" image="passive" id="tIW-Lz-zqx" userLabel="Passive">
+                        <color key="badgeColor" name="BioIDBlue"/>
+                    </tabBarItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageViewer" destination="LDO-HL-2of" id="mBB-y3-EWd"/>
+                        <outlet property="introduction" destination="1Ju-qn-OlC" id="EGV-bf-3PG"/>
+                        <outlet property="process" destination="eY3-MW-0c9" id="m9S-t1-h9L"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ydd-dl-xaO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3168.7022900763359" y="741.54929577464793"/>
+        </scene>
+        <!--Active-->
+        <scene sceneID="wbB-k1-NNS">
+            <objects>
+                <viewController id="fE4-kL-RbC" userLabel="Active" customClass="ActiveViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qdn-U6-pkw">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Active Liveness Detection" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i8G-ZH-HOR">
+                                <rect key="frame" x="47" y="0.0" width="750" height="45"/>
+                                <color key="backgroundColor" name="BioIDBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="xdy-27-AQN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uvz-Yy-DwR">
+                                <rect key="frame" x="67" y="100" width="710" height="56"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">The Active Liveness Detection uses beside of the texture based liveness detection on each of the provided images a motion bassed 3 D detection on each two consecutive image is executed. All decisions must indicate a live person to finally declare the entire call as live.</string>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jde-IL-A2c" userLabel="Image View 1">
+                                <rect key="frame" x="63" y="53" width="352" height="150"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6oL-jp-97Z" userLabel="Image View 2">
+                                <rect key="frame" x="428" y="53" width="352" height="150"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Sn-fD-rwb" userLabel="CaptureButton">
+                                <rect key="frame" x="67" y="224" width="710" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="sqF-Fn-gkk"/>
+                                </constraints>
+                                <state key="normal" title="Capture photos"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Capture photos">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" name="BioIDBlue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="capturePhotos:" destination="fE4-kL-RbC" eventType="touchUpInside" id="lg5-lF-qvk"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TO8-PS-KAW" userLabel="ProcessButton">
+                                <rect key="frame" x="67" y="287" width="710" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="PnB-Yp-j16"/>
+                                </constraints>
+                                <state key="normal" title="Process">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="filled" title="Process">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" name="BioIDBlue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="process:" destination="fE4-kL-RbC" eventType="touchUpInside" id="79q-ah-M5e"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="mko-pu-dLm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="mko-pu-dLm" firstAttribute="bottom" secondItem="6oL-jp-97Z" secondAttribute="bottom" constant="134" id="1ri-RE-0jb"/>
+                            <constraint firstItem="TO8-PS-KAW" firstAttribute="leading" secondItem="mko-pu-dLm" secondAttribute="leading" constant="20" id="3pI-DK-Whf"/>
+                            <constraint firstItem="7Sn-fD-rwb" firstAttribute="leading" secondItem="mko-pu-dLm" secondAttribute="leading" constant="20" id="79w-iT-Nao"/>
+                            <constraint firstItem="i8G-ZH-HOR" firstAttribute="top" secondItem="mko-pu-dLm" secondAttribute="top" id="7el-d5-WaT"/>
+                            <constraint firstItem="7Sn-fD-rwb" firstAttribute="top" secondItem="jde-IL-A2c" secondAttribute="bottom" constant="21" id="7z5-Sh-wSX"/>
+                            <constraint firstItem="6oL-jp-97Z" firstAttribute="centerY" secondItem="jde-IL-A2c" secondAttribute="centerY" id="8MD-Ow-4It"/>
+                            <constraint firstItem="7Sn-fD-rwb" firstAttribute="top" secondItem="6oL-jp-97Z" secondAttribute="bottom" constant="21" id="Chl-Ts-h7I"/>
+                            <constraint firstItem="jde-IL-A2c" firstAttribute="leading" secondItem="mko-pu-dLm" secondAttribute="leading" constant="16" id="Hcx-Vo-TC4"/>
+                            <constraint firstItem="mko-pu-dLm" firstAttribute="trailing" secondItem="TO8-PS-KAW" secondAttribute="trailing" constant="20" id="IC0-79-Zf8"/>
+                            <constraint firstItem="mko-pu-dLm" firstAttribute="bottom" secondItem="Uvz-Yy-DwR" secondAttribute="bottom" constant="181" id="IK8-ob-Xyk"/>
+                            <constraint firstItem="mko-pu-dLm" firstAttribute="centerX" secondItem="i8G-ZH-HOR" secondAttribute="centerX" id="KNa-1u-78v"/>
+                            <constraint firstItem="6oL-jp-97Z" firstAttribute="leading" secondItem="jde-IL-A2c" secondAttribute="trailing" constant="13" id="NwR-XH-0Tv"/>
+                            <constraint firstItem="i8G-ZH-HOR" firstAttribute="leading" secondItem="mko-pu-dLm" secondAttribute="leading" id="Se9-1a-biB"/>
+                            <constraint firstItem="mko-pu-dLm" firstAttribute="bottom" secondItem="7Sn-fD-rwb" secondAttribute="bottom" constant="63" id="XEg-d9-Khl"/>
+                            <constraint firstItem="Uvz-Yy-DwR" firstAttribute="top" secondItem="mko-pu-dLm" secondAttribute="top" constant="100" id="eBq-Y5-Zkg"/>
+                            <constraint firstItem="jde-IL-A2c" firstAttribute="width" secondItem="6oL-jp-97Z" secondAttribute="width" id="hKf-YD-nzu"/>
+                            <constraint firstItem="mko-pu-dLm" firstAttribute="trailing" secondItem="7Sn-fD-rwb" secondAttribute="trailing" constant="20" id="ixw-e6-xoc"/>
+                            <constraint firstItem="mko-pu-dLm" firstAttribute="trailing" secondItem="6oL-jp-97Z" secondAttribute="trailing" constant="17" id="k0U-OS-pPd"/>
+                            <constraint firstItem="Uvz-Yy-DwR" firstAttribute="leading" secondItem="mko-pu-dLm" secondAttribute="leading" constant="20" id="mqp-MB-YOT"/>
+                            <constraint firstItem="mko-pu-dLm" firstAttribute="trailing" secondItem="Uvz-Yy-DwR" secondAttribute="trailing" constant="20" id="nlG-Vy-Vy1"/>
+                            <constraint firstItem="mko-pu-dLm" firstAttribute="bottom" secondItem="TO8-PS-KAW" secondAttribute="bottom" id="piR-K1-MAN"/>
+                            <constraint firstItem="jde-IL-A2c" firstAttribute="top" secondItem="i8G-ZH-HOR" secondAttribute="bottom" constant="8" symbolic="YES" id="tR1-db-6wO"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Active" image="active" id="dFH-wP-LDv">
+                        <color key="badgeColor" name="BioIDBlue"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="capturePhotos" destination="7Sn-fD-rwb" id="Cbu-Zd-c0j"/>
+                        <outlet property="imageViewer1" destination="jde-IL-A2c" id="a1t-2u-PYr"/>
+                        <outlet property="imageViewer2" destination="6oL-jp-97Z" id="TaY-xL-jXq"/>
+                        <outlet property="introduction" destination="Uvz-Yy-DwR" id="Km0-ib-LzR"/>
+                        <outlet property="process" destination="TO8-PS-KAW" id="gj3-3P-TRZ"/>
+                        <segue destination="1Id-4u-aFO" kind="presentation" identifier="showBioIDCaptureView" modalPresentationStyle="fullScreen" id="Cew-7g-433"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RJq-zo-Q0i" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2431.5789473684208" y="741.79104477611941"/>
+        </scene>
+        <!--Challenge-->
+        <scene sceneID="wOk-jL-UCE">
+            <objects>
+                <viewController id="WvU-Qm-Ai4" userLabel="Challenge" customClass="ChallengeViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uRG-yE-gYs">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge Response" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8hc-41-yyO">
+                                <rect key="frame" x="47" y="0.0" width="750" height="45"/>
+                                <color key="backgroundColor" name="BioIDBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="BGP-sp-7cP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yuv-Ee-da9">
+                                <rect key="frame" x="67" y="97" width="710" height="106"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">The challenge-response mechanism checks the second image, whether this is the same direction as demanded by the tags, i.e. whether the head moved up, down, left or right as requested.</string>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="s8z-Eh-rx6" userLabel="Image View 1">
+                                <rect key="frame" x="67" y="53" width="350" height="151"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BOl-lY-5bd" userLabel="Image View 2">
+                                <rect key="frame" x="430" y="54" width="350" height="150"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NFS-Ec-Nju" userLabel="ProcessButton">
+                                <rect key="frame" x="67" y="287" width="710" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="Zpw-S6-Gnk"/>
+                                </constraints>
+                                <state key="normal" title="Process">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="filled" title="Process">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" name="BioIDBlue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="process:" destination="WvU-Qm-Ai4" eventType="touchUpInside" id="Gaw-jY-nox"/>
+                                    <action selector="process:" destination="fE4-kL-RbC" eventType="touchUpInside" id="nlN-fz-EU2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o3s-VS-5kO" userLabel="CaptureButton">
+                                <rect key="frame" x="67" y="224" width="710" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="W60-la-akH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Capture photos"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Capture photos">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" name="BioIDBlue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="1Id-4u-aFO" kind="presentation" identifier="showBioIDCaptureView" modalPresentationStyle="fullScreen" id="Rtt-4W-6ya"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jaL-Lq-WgU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="s8z-Eh-rx6" firstAttribute="top" secondItem="8hc-41-yyO" secondAttribute="bottom" constant="8" id="Cq6-Qn-8LJ"/>
+                            <constraint firstItem="jaL-Lq-WgU" firstAttribute="bottom" secondItem="Yuv-Ee-da9" secondAttribute="bottom" constant="134" id="FDl-aW-qD6"/>
+                            <constraint firstItem="jaL-Lq-WgU" firstAttribute="leading" secondItem="8hc-41-yyO" secondAttribute="leading" id="FrH-Lv-GMt"/>
+                            <constraint firstItem="NFS-Ec-Nju" firstAttribute="bottom" secondItem="jaL-Lq-WgU" secondAttribute="bottom" id="QBj-c5-wNo"/>
+                            <constraint firstItem="jaL-Lq-WgU" firstAttribute="bottom" secondItem="o3s-VS-5kO" secondAttribute="bottom" constant="63" id="QoW-ur-tgr"/>
+                            <constraint firstItem="BOl-lY-5bd" firstAttribute="leading" secondItem="s8z-Eh-rx6" secondAttribute="trailing" constant="13" id="VuF-Ug-pD3"/>
+                            <constraint firstItem="s8z-Eh-rx6" firstAttribute="width" secondItem="BOl-lY-5bd" secondAttribute="width" id="aop-by-Rwn"/>
+                            <constraint firstItem="BOl-lY-5bd" firstAttribute="top" secondItem="8hc-41-yyO" secondAttribute="bottom" constant="9" id="cK2-qZ-mvw"/>
+                            <constraint firstItem="Yuv-Ee-da9" firstAttribute="top" secondItem="jaL-Lq-WgU" secondAttribute="top" constant="97" id="dq4-xv-9TB"/>
+                            <constraint firstItem="jaL-Lq-WgU" firstAttribute="trailing" secondItem="Yuv-Ee-da9" secondAttribute="trailing" constant="20" id="eKD-dU-2DX"/>
+                            <constraint firstItem="s8z-Eh-rx6" firstAttribute="leading" secondItem="jaL-Lq-WgU" secondAttribute="leading" constant="20" id="hvQ-kD-miS"/>
+                            <constraint firstItem="o3s-VS-5kO" firstAttribute="top" secondItem="s8z-Eh-rx6" secondAttribute="bottom" constant="20" id="lPV-la-3Fv"/>
+                            <constraint firstItem="NFS-Ec-Nju" firstAttribute="leading" secondItem="jaL-Lq-WgU" secondAttribute="leading" constant="20" id="nRh-wt-aE7"/>
+                            <constraint firstItem="8hc-41-yyO" firstAttribute="top" secondItem="jaL-Lq-WgU" secondAttribute="top" id="nwy-SC-YF8"/>
+                            <constraint firstItem="jaL-Lq-WgU" firstAttribute="trailing" secondItem="o3s-VS-5kO" secondAttribute="trailing" constant="20" id="td7-gm-qSi"/>
+                            <constraint firstItem="8hc-41-yyO" firstAttribute="centerX" secondItem="jaL-Lq-WgU" secondAttribute="centerX" id="uVr-ml-TVK"/>
+                            <constraint firstItem="o3s-VS-5kO" firstAttribute="top" secondItem="BOl-lY-5bd" secondAttribute="bottom" constant="20" id="vXE-nc-JyS"/>
+                            <constraint firstItem="jaL-Lq-WgU" firstAttribute="trailing" secondItem="BOl-lY-5bd" secondAttribute="trailing" constant="17" id="wES-uo-nRP"/>
+                            <constraint firstItem="o3s-VS-5kO" firstAttribute="leading" secondItem="jaL-Lq-WgU" secondAttribute="leading" constant="20" id="yA1-0O-kAp"/>
+                            <constraint firstItem="Yuv-Ee-da9" firstAttribute="leading" secondItem="jaL-Lq-WgU" secondAttribute="leading" constant="20" id="yYa-av-Ydn"/>
+                            <constraint firstItem="jaL-Lq-WgU" firstAttribute="trailing" secondItem="NFS-Ec-Nju" secondAttribute="trailing" constant="20" id="zRI-Jc-eMW"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Challenge" image="challenge" id="Y6i-1p-rgm">
+                        <color key="badgeColor" name="BioIDBlue"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="capturePhotos" destination="o3s-VS-5kO" id="rkX-dW-VhG"/>
+                        <outlet property="imageViewer1" destination="s8z-Eh-rx6" id="bW8-vp-fAs"/>
+                        <outlet property="imageViewer2" destination="BOl-lY-5bd" id="oaP-bz-GXC"/>
+                        <outlet property="introduction" destination="Yuv-Ee-da9" id="Ddd-Yk-rch"/>
+                        <outlet property="process" destination="NFS-Ec-Nju" id="ahj-pt-HQE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HE6-FX-xz1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1722.4256292906177" y="743.28358208955217"/>
+        </scene>
+        <!--PhotoVerify-->
+        <scene sceneID="XBA-0a-0sC">
+            <objects>
+                <viewController id="K2s-bB-GF4" userLabel="PhotoVerify" customClass="PhotoVerifyViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S42-EM-uNX">
+                        <rect key="frame" x="0.0" y="0.0" width="844" height="390"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PhotoVerify" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SUG-NT-YGm">
+                                <rect key="frame" x="47" y="0.0" width="750" height="45"/>
+                                <color key="backgroundColor" name="BioIDBlue"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="9VV-Hp-zVE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jox-h3-6np">
+                                <rect key="frame" x="67" y="97" width="710" height="57"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">PhotoVerify is a service, which uses one photo, e.g. a passport image from an ID document, and compares that to one or two "live" images of a person, to find out whether the persons shown are the same. No classes are created, no templates or patterns are stored. It fullfills all requirements for an anonymous ID proofing service.</string>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="zvZ-Wu-7jd" userLabel="Image View 1">
+                                <rect key="frame" x="67" y="53" width="351" height="31"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="R3A-sX-MFb" userLabel="Image View 2">
+                                <rect key="frame" x="430" y="53" width="350" height="31"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nI4-DJ-gJB" userLabel="Image View 3">
+                                <rect key="frame" x="67" y="95" width="710" height="60"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwd-v9-DNb" userLabel="CaptureButton">
+                                <rect key="frame" x="67" y="166" width="351" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="eq8-f2-yeI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Capture photo"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Capture 1 photo">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" name="BioIDBlue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="captureSinglePhoto:" destination="K2s-bB-GF4" eventType="touchUpInside" id="exl-uV-JMN"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ahB-PK-7vG" userLabel="CaptureLiveButton">
+                                <rect key="frame" x="426" y="166" width="351" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6zl-90-5Pa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Capture live photos"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Capture 2 photos">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" name="BioIDBlue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <segue destination="1Id-4u-aFO" kind="presentation" identifier="showBioIDCaptureView" modalPresentationStyle="fullScreen" id="ZSr-uP-yYu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xKZ-HX-3gD" userLabel="CaptureIDPhotoButton">
+                                <rect key="frame" x="67" y="224" width="710" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="U3Z-t0-cUq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Capture ID photo"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Capture ID photo">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" name="BioIDBlue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="captureIDPhoto:" destination="K2s-bB-GF4" eventType="touchUpInside" id="sKb-EE-aT8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pbs-ts-tWt" userLabel="ProcessButton">
+                                <rect key="frame" x="67" y="287" width="710" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="xyH-Ts-RkR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Process"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Process">
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                    <color key="baseBackgroundColor" name="BioIDBlue"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="process:" destination="K2s-bB-GF4" eventType="touchUpInside" id="VzY-Yq-xNa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="xLb-0a-ePd"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ahB-PK-7vG" firstAttribute="top" secondItem="nI4-DJ-gJB" secondAttribute="bottom" constant="11" id="0sX-0G-7fl"/>
+                            <constraint firstItem="xLb-0a-ePd" firstAttribute="bottom" secondItem="Pbs-ts-tWt" secondAttribute="bottom" id="2ce-xA-ccF"/>
+                            <constraint firstItem="xLb-0a-ePd" firstAttribute="trailing" secondItem="nI4-DJ-gJB" secondAttribute="trailing" constant="20" id="6QV-6D-rnP"/>
+                            <constraint firstItem="xKZ-HX-3gD" firstAttribute="leading" secondItem="xLb-0a-ePd" secondAttribute="leading" constant="20" id="84h-e1-cyT"/>
+                            <constraint firstItem="SUG-NT-YGm" firstAttribute="top" secondItem="xLb-0a-ePd" secondAttribute="top" id="98F-fS-78K"/>
+                            <constraint firstItem="xLb-0a-ePd" firstAttribute="trailing" secondItem="ahB-PK-7vG" secondAttribute="trailing" constant="20" id="9DR-oj-zUX"/>
+                            <constraint firstItem="R3A-sX-MFb" firstAttribute="top" secondItem="SUG-NT-YGm" secondAttribute="bottom" constant="8" id="9bZ-DD-zsc"/>
+                            <constraint firstItem="SUG-NT-YGm" firstAttribute="leading" secondItem="xLb-0a-ePd" secondAttribute="leading" id="AKN-PA-z0D"/>
+                            <constraint firstItem="xLb-0a-ePd" firstAttribute="trailing" secondItem="xKZ-HX-3gD" secondAttribute="trailing" constant="20" id="FFF-YD-UnC"/>
+                            <constraint firstItem="Jox-h3-6np" firstAttribute="leading" secondItem="xLb-0a-ePd" secondAttribute="leading" constant="20" id="Fb2-cA-0ZR"/>
+                            <constraint firstItem="xLb-0a-ePd" firstAttribute="trailing" secondItem="Pbs-ts-tWt" secondAttribute="trailing" constant="20" id="LS2-ay-KH8"/>
+                            <constraint firstItem="nI4-DJ-gJB" firstAttribute="top" secondItem="R3A-sX-MFb" secondAttribute="bottom" constant="11" id="NMG-JE-pWP"/>
+                            <constraint firstItem="zvZ-Wu-7jd" firstAttribute="leading" secondItem="xLb-0a-ePd" secondAttribute="leading" constant="20" id="NPF-pt-zSX"/>
+                            <constraint firstItem="Dwd-v9-DNb" firstAttribute="leading" secondItem="xLb-0a-ePd" secondAttribute="leading" constant="20" id="Ppr-hD-LLj"/>
+                            <constraint firstItem="xLb-0a-ePd" firstAttribute="bottom" secondItem="Jox-h3-6np" secondAttribute="bottom" constant="183" id="TKy-lE-hEu"/>
+                            <constraint firstItem="nI4-DJ-gJB" firstAttribute="top" secondItem="zvZ-Wu-7jd" secondAttribute="bottom" constant="11" id="TnM-Bv-gOD"/>
+                            <constraint firstItem="SUG-NT-YGm" firstAttribute="centerX" secondItem="xLb-0a-ePd" secondAttribute="centerX" id="Uef-IQ-kQP"/>
+                            <constraint firstItem="xLb-0a-ePd" firstAttribute="trailing" secondItem="R3A-sX-MFb" secondAttribute="trailing" constant="17" id="Vgz-0U-0Ls"/>
+                            <constraint firstItem="Jox-h3-6np" firstAttribute="top" secondItem="xLb-0a-ePd" secondAttribute="top" constant="97" id="ZEN-Wi-PXA"/>
+                            <constraint firstItem="Pbs-ts-tWt" firstAttribute="leading" secondItem="xLb-0a-ePd" secondAttribute="leading" constant="20" id="aT0-ou-rmT"/>
+                            <constraint firstItem="xLb-0a-ePd" firstAttribute="trailing" secondItem="Jox-h3-6np" secondAttribute="trailing" constant="20" id="e6D-Y6-fpJ"/>
+                            <constraint firstItem="R3A-sX-MFb" firstAttribute="leading" secondItem="zvZ-Wu-7jd" secondAttribute="trailing" constant="12" id="h0W-ad-xv2"/>
+                            <constraint firstItem="zvZ-Wu-7jd" firstAttribute="width" secondItem="R3A-sX-MFb" secondAttribute="width" constant="1" id="imo-PZ-02H"/>
+                            <constraint firstItem="xKZ-HX-3gD" firstAttribute="top" secondItem="Dwd-v9-DNb" secondAttribute="bottom" constant="8" id="jVy-7u-9NC"/>
+                            <constraint firstItem="ahB-PK-7vG" firstAttribute="leading" secondItem="Dwd-v9-DNb" secondAttribute="trailing" constant="8" id="kUM-EC-i8h"/>
+                            <constraint firstItem="zvZ-Wu-7jd" firstAttribute="height" secondItem="nI4-DJ-gJB" secondAttribute="height" multiplier="0.52" id="ksu-y8-u6R"/>
+                            <constraint firstItem="zvZ-Wu-7jd" firstAttribute="top" secondItem="SUG-NT-YGm" secondAttribute="bottom" constant="8" id="lNw-Hu-5ib"/>
+                            <constraint firstItem="nI4-DJ-gJB" firstAttribute="leading" secondItem="xLb-0a-ePd" secondAttribute="leading" constant="20" id="lOU-fk-xq8"/>
+                            <constraint firstItem="Dwd-v9-DNb" firstAttribute="top" secondItem="nI4-DJ-gJB" secondAttribute="bottom" constant="11" id="nzT-6G-ktP"/>
+                            <constraint firstItem="xKZ-HX-3gD" firstAttribute="top" secondItem="ahB-PK-7vG" secondAttribute="bottom" constant="8" id="oUn-Ub-7zr"/>
+                            <constraint firstItem="xLb-0a-ePd" firstAttribute="bottom" secondItem="xKZ-HX-3gD" secondAttribute="bottom" constant="63" id="q8n-dF-qze"/>
+                            <constraint firstItem="Dwd-v9-DNb" firstAttribute="width" secondItem="ahB-PK-7vG" secondAttribute="width" id="yUc-Uq-omv"/>
+                        </constraints>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="PhotoVerify" image="photoverify" id="8xb-PE-MkI">
+                        <color key="badgeColor" name="BioIDBlue"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="captureIDPhoto" destination="xKZ-HX-3gD" id="H5C-Ko-DEq"/>
+                        <outlet property="captureLivePhotos" destination="ahB-PK-7vG" id="vYb-Tb-c2Y"/>
+                        <outlet property="captureSinglePhoto" destination="Dwd-v9-DNb" id="v7s-cC-AtG"/>
+                        <outlet property="imageViewer1" destination="zvZ-Wu-7jd" id="zPs-aw-0BD"/>
+                        <outlet property="imageViewer2" destination="R3A-sX-MFb" id="zXK-T8-UCb"/>
+                        <outlet property="imageViewer3" destination="nI4-DJ-gJB" id="cf9-Cd-5qL"/>
+                        <outlet property="introduction" destination="Jox-h3-6np" id="gMg-Uj-eHs"/>
+                        <outlet property="process" destination="Pbs-ts-tWt" id="v7F-n5-zTR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zdt-oo-wNc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1029.0617848970251" y="743.28358208955217"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Q8K-aG-4Di">
+            <objects>
+                <tabBarController id="OR4-Od-ygr" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="5Sw-gy-ONS">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" name="BioIDBlue"/>
+                        <color key="selectedImageTintColor" name="BioIDBlue"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jk0-XR-47Q" kind="relationship" relationship="viewControllers" id="bM8-Ra-4bl"/>
+                        <segue destination="fE4-kL-RbC" kind="relationship" relationship="viewControllers" id="Z52-Hm-Fqf"/>
+                        <segue destination="WvU-Qm-Ai4" kind="relationship" relationship="viewControllers" id="vCs-tb-TsT"/>
+                        <segue destination="K2s-bB-GF4" kind="relationship" relationship="viewControllers" id="BGW-p0-E8D"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="736-zr-rcs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1719" y="-24"/>
+        </scene>
+    </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZSr-uP-yYu"/>
+    </inferredMetricsTieBreakers>
+    <resources>
+        <image name="active" width="24" height="24"/>
+        <image name="challenge" width="24" height="24"/>
+        <image name="passive" width="24" height="24"/>
+        <image name="photoverify" width="24" height="24"/>
+        <namedColor name="BioIDBlue">
+            <color red="0.37647058823529411" green="0.4823529411764706" blue="0.69019607843137254" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

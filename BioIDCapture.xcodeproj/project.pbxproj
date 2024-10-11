@@ -1,0 +1,395 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA960E892C78BA820007AE5E /* BWS3Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = FA960E882C78BA820007AE5E /* BWS3Settings.m */; };
+		FA960E8C2C78C1A30007AE5E /* BioIDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA960E8B2C78C1A30007AE5E /* BioIDHelper.m */; };
+		FAA27322224E801E0070B425 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA27321224E801E0070B425 /* art.scnassets */; };
+		FAB720C12C99CA9B009899AE /* ResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB720C02C99CA99009899AE /* ResultViewController.m */; };
+		FAE3262A2C22D002001BB9F2 /* PassiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE326292C22D002001BB9F2 /* PassiveViewController.m */; };
+		FAE3262E2C22D0B7001BB9F2 /* ChallengeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3262D2C22D0B7001BB9F2 /* ChallengeViewController.m */; };
+		FAE326302C22D0C8001BB9F2 /* PhotoVerifyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE3262F2C22D0C8001BB9F2 /* PhotoVerifyViewController.m */; };
+		FAEFCC8B222EBD29008C4DF3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFCC8A222EBD29008C4DF3 /* AppDelegate.m */; };
+		FAEFCC8E222EBD29008C4DF3 /* ActiveViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFCC8D222EBD29008C4DF3 /* ActiveViewController.m */; };
+		FAEFCC91222EBD29008C4DF3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEFCC8F222EBD29008C4DF3 /* Main.storyboard */; };
+		FAEFCC93222EBD2A008C4DF3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAEFCC92222EBD2A008C4DF3 /* Assets.xcassets */; };
+		FAEFCC96222EBD2A008C4DF3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAEFCC94222EBD2A008C4DF3 /* LaunchScreen.storyboard */; };
+		FAEFCC99222EBD2A008C4DF3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFCC98222EBD2A008C4DF3 /* main.m */; };
+		FAEFCCBC22301589008C4DF3 /* BioIDCaptureViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAEFCCBB22301589008C4DF3 /* BioIDCaptureViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		FA960E882C78BA820007AE5E /* BWS3Settings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWS3Settings.m; sourceTree = "<group>"; };
+		FA960E8A2C78BAA70007AE5E /* BWS3Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWS3Settings.h; sourceTree = "<group>"; };
+		FA960E8B2C78C1A30007AE5E /* BioIDHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BioIDHelper.m; sourceTree = "<group>"; };
+		FA960E8D2C78C1B90007AE5E /* BioIDHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BioIDHelper.h; sourceTree = "<group>"; };
+		FAA27321224E801E0070B425 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		FAB720BF2C99CA7C009899AE /* ResultViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ResultViewController.h; sourceTree = "<group>"; };
+		FAB720C02C99CA99009899AE /* ResultViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ResultViewController.m; sourceTree = "<group>"; };
+		FAE326292C22D002001BB9F2 /* PassiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PassiveViewController.m; sourceTree = "<group>"; };
+		FAE3262B2C22D07C001BB9F2 /* PassiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PassiveViewController.h; sourceTree = "<group>"; };
+		FAE3262C2C22D0A6001BB9F2 /* ChallengeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChallengeViewController.h; sourceTree = "<group>"; };
+		FAE3262D2C22D0B7001BB9F2 /* ChallengeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChallengeViewController.m; sourceTree = "<group>"; };
+		FAE3262F2C22D0C8001BB9F2 /* PhotoVerifyViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PhotoVerifyViewController.m; sourceTree = "<group>"; };
+		FAE326312C22D0DD001BB9F2 /* PhotoVerifyViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PhotoVerifyViewController.h; sourceTree = "<group>"; };
+		FAEFCC86222EBD29008C4DF3 /* BioIDCapture.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BioIDCapture.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAEFCC89222EBD29008C4DF3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		FAEFCC8A222EBD29008C4DF3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		FAEFCC8C222EBD29008C4DF3 /* ActiveViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ActiveViewController.h; sourceTree = "<group>"; };
+		FAEFCC8D222EBD29008C4DF3 /* ActiveViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ActiveViewController.m; sourceTree = "<group>"; };
+		FAEFCC90222EBD29008C4DF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		FAEFCC92222EBD2A008C4DF3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAEFCC95222EBD2A008C4DF3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FAEFCC97222EBD2A008C4DF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FAEFCC98222EBD2A008C4DF3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAEFCCBB22301589008C4DF3 /* BioIDCaptureViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BioIDCaptureViewController.m; sourceTree = "<group>"; };
+		FAEFCCBD22301807008C4DF3 /* BioIDCaptureViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BioIDCaptureViewController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAEFCC83222EBD29008C4DF3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAEFCC7D222EBD29008C4DF3 = {
+			isa = PBXGroup;
+			children = (
+				FAEFCC88222EBD29008C4DF3 /* BioIDCapture */,
+				FAEFCC87222EBD29008C4DF3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAEFCC87222EBD29008C4DF3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAEFCC86222EBD29008C4DF3 /* BioIDCapture.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAEFCC88222EBD29008C4DF3 /* BioIDCapture */ = {
+			isa = PBXGroup;
+			children = (
+				FAEFCC89222EBD29008C4DF3 /* AppDelegate.h */,
+				FAEFCC8A222EBD29008C4DF3 /* AppDelegate.m */,
+				FAE3262B2C22D07C001BB9F2 /* PassiveViewController.h */,
+				FAE326292C22D002001BB9F2 /* PassiveViewController.m */,
+				FAEFCC8C222EBD29008C4DF3 /* ActiveViewController.h */,
+				FAEFCC8D222EBD29008C4DF3 /* ActiveViewController.m */,
+				FAE3262C2C22D0A6001BB9F2 /* ChallengeViewController.h */,
+				FAE3262D2C22D0B7001BB9F2 /* ChallengeViewController.m */,
+				FAE326312C22D0DD001BB9F2 /* PhotoVerifyViewController.h */,
+				FAE3262F2C22D0C8001BB9F2 /* PhotoVerifyViewController.m */,
+				FAEFCCBD22301807008C4DF3 /* BioIDCaptureViewController.h */,
+				FAEFCCBB22301589008C4DF3 /* BioIDCaptureViewController.m */,
+				FAB720BF2C99CA7C009899AE /* ResultViewController.h */,
+				FAB720C02C99CA99009899AE /* ResultViewController.m */,
+				FA960E8D2C78C1B90007AE5E /* BioIDHelper.h */,
+				FA960E8B2C78C1A30007AE5E /* BioIDHelper.m */,
+				FA960E8A2C78BAA70007AE5E /* BWS3Settings.h */,
+				FA960E882C78BA820007AE5E /* BWS3Settings.m */,
+				FAEFCC8F222EBD29008C4DF3 /* Main.storyboard */,
+				FAEFCC92222EBD2A008C4DF3 /* Assets.xcassets */,
+				FAA27321224E801E0070B425 /* art.scnassets */,
+				FAEFCC94222EBD2A008C4DF3 /* LaunchScreen.storyboard */,
+				FAEFCC97222EBD2A008C4DF3 /* Info.plist */,
+				FAEFCC98222EBD2A008C4DF3 /* main.m */,
+			);
+			path = BioIDCapture;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAEFCC85222EBD29008C4DF3 /* BioIDCapture */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAEFCCB2222EBD2A008C4DF3 /* Build configuration list for PBXNativeTarget "BioIDCapture" */;
+			buildPhases = (
+				FAEFCC82222EBD29008C4DF3 /* Sources */,
+				FAEFCC83222EBD29008C4DF3 /* Frameworks */,
+				FAEFCC84222EBD29008C4DF3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BioIDCapture;
+			productName = BWSCapture;
+			productReference = FAEFCC86222EBD29008C4DF3 /* BioIDCapture.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAEFCC7E222EBD29008C4DF3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1600;
+				ORGANIZATIONNAME = "Alexander Werner";
+				TargetAttributes = {
+					FAEFCC85222EBD29008C4DF3 = {
+						CreatedOnToolsVersion = 10.1;
+					};
+				};
+			};
+			buildConfigurationList = FAEFCC81222EBD29008C4DF3 /* Build configuration list for PBXProject "BioIDCapture" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAEFCC7D222EBD29008C4DF3;
+			productRefGroup = FAEFCC87222EBD29008C4DF3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAEFCC85222EBD29008C4DF3 /* BioIDCapture */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAEFCC84222EBD29008C4DF3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAEFCC96222EBD2A008C4DF3 /* LaunchScreen.storyboard in Resources */,
+				FAA27322224E801E0070B425 /* art.scnassets in Resources */,
+				FAEFCC93222EBD2A008C4DF3 /* Assets.xcassets in Resources */,
+				FAEFCC91222EBD29008C4DF3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAEFCC82222EBD29008C4DF3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA960E8C2C78C1A30007AE5E /* BioIDHelper.m in Sources */,
+				FAE3262E2C22D0B7001BB9F2 /* ChallengeViewController.m in Sources */,
+				FAEFCC8E222EBD29008C4DF3 /* ActiveViewController.m in Sources */,
+				FAB720C12C99CA9B009899AE /* ResultViewController.m in Sources */,
+				FAEFCCBC22301589008C4DF3 /* BioIDCaptureViewController.m in Sources */,
+				FAEFCC99222EBD2A008C4DF3 /* main.m in Sources */,
+				FA960E892C78BA820007AE5E /* BWS3Settings.m in Sources */,
+				FAE3262A2C22D002001BB9F2 /* PassiveViewController.m in Sources */,
+				FAEFCC8B222EBD29008C4DF3 /* AppDelegate.m in Sources */,
+				FAE326302C22D0C8001BB9F2 /* PhotoVerifyViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		FAEFCC8F222EBD29008C4DF3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAEFCC90222EBD29008C4DF3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		FAEFCC94222EBD2A008C4DF3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FAEFCC95222EBD2A008C4DF3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FAEFCCB0222EBD2A008C4DF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		FAEFCCB1222EBD2A008C4DF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAEFCCB3222EBD2A008C4DF3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = BioIDCapture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bioid.mobile.BioIDCapture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAEFCCB4222EBD2A008C4DF3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = BioIDCapture/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.bioid.mobile.BioIDCapture;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAEFCC81222EBD29008C4DF3 /* Build configuration list for PBXProject "BioIDCapture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAEFCCB0222EBD2A008C4DF3 /* Debug */,
+				FAEFCCB1222EBD2A008C4DF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAEFCCB2222EBD2A008C4DF3 /* Build configuration list for PBXNativeTarget "BioIDCapture" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAEFCCB3222EBD2A008C4DF3 /* Debug */,
+				FAEFCCB4222EBD2A008C4DF3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAEFCC7E222EBD29008C4DF3 /* Project object */;
+}
