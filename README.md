@@ -98,11 +98,15 @@ The `UIImagePickerController` is also used for capturing the ID photo e.g. passp
 
 [More details about the BioIDCaptureViewController.](BioIDCaptureViewController.md) 
 
+### Network Data Transfer
+
+The NSURLSession object checks the [`HTTP Status Codes`][DevLivenessDetection] and evaluates the response from the BioID Web Service and displays it in the ResultViewController.
 
 
-[DevLivenessDetection]: https://developer.bioid.com/bws/grpc/livenessdetection "BioID LivenessDetection - developer.bioid.com" 
-[DevPhotoVerify]: https://developer.bioid.com/bws/grpc/photoverify "BioID PhotoVerify - developer.bioid.com"
+[DevLivenessDetection]: https://developer.bioid.com/bws/restful/livenessdetection "BioID LivenessDetection - developer.bioid.com" 
+[DevPhotoVerify]: https://developer.bioid.com/bws/restful/photoverify "BioID PhotoVerify - developer.bioid.com"
 [DevLivenessModes]: https://developer.bioid.com/bws/livenessmodes "BioID Liveness Detection Modes - developer.bioi.com"
 [RepoRestGrpcCSharp]: https://github.com/BioID-GmbH/BWSClient-RestGrpc-CSharp "GitHub Repository BWSClient-RestGrpc-CSharp"
 [RepoRestGrpcJava]: https://github.com/BioID-GmbH/BWSClient-RestGrpc-Java  "GitHub Repository BWSClient-RestGrpc-Java"
 [ArticleLocalHostAndiPhone]: https://ishwar-rimal.medium.com/accessing-macs-localhost-on-your-iphone-5d564a387f09 "Accessing your macbook's localhost on your iPhone"
+
