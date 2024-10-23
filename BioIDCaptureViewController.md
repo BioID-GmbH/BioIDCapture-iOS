@@ -58,9 +58,9 @@ for example “Nod your head”, a second image is captured by Motion Detection.
 
 
 ### 3D Head
-A 3D head is displayed during the recording. Two modes are defined for this. For Active Liveness Detection, 
-the user is promptly shown “Nod your head” and the 3D head moves accordingly. 
+A 3D head is displayed during the recording. Two modes are defined for this. In Active Liveness Detection, 
+the user is prompted to “Nod your head” and the 3D head moves accordingly. 
 For Challenge-Response, the user prompt “Follow the blue head” is displayed 
-and the 3D head moves in the specified direction that was previously defined 
-with the challenge tag.
+and the 3D head moves in the specified direction, which was previously defined 
+with the `challengeTag`.
 
