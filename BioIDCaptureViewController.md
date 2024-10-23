@@ -25,7 +25,7 @@ Here is an example
 
   ```
 
-In the example above, a ChallengeTag is randomly set from a predefined array at head movements.
+In the example above, a `challengeTag` is randomly set from a predefined array at head movements.
 This is only necessary if you want to use challenge-response!
 
 It is important that the callback is set to `self` and that the calling controller e.g. ActiveViewController has implemented 
