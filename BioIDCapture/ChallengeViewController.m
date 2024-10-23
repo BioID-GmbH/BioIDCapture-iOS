@@ -71,7 +71,7 @@
     if ([[segue identifier] isEqualToString:@"showBioIDCaptureView"]) {
         BioIDCaptureViewController *viewController = [segue destinationViewController];
         
-        // Random generator based on existing challengs
+        // Random generator based on existing challenges
         uint32_t rnd = arc4random_uniform((int)[challenges count]);
         
         // Set random challenge of predefined challenges
