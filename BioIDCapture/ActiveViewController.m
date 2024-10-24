@@ -162,9 +162,47 @@
     return config;
 }
 
+- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveResponse:(NSURLResponse *)response completionHandler:(void (^)(NSURLSessionResponseDisposition disposition))completionHandler {
+    
+    completionHandler(NSURLSessionResponseAllow);
+    
+    NSInteger statusCode = [(NSHTTPURLResponse *)response statusCode];
+   
+    if (statusCode != 200) {
+        
+        switch (statusCode) {
+            case 400:
+                NSLog(@"Bad Request");
+                break;
+            case 401:
+                NSLog(@"Unauthorized");
+                break;
+            case 408:
+                NSLog(@"Request Timeout");
+                break;
+            case 500:
+                NSLog(@"Internal Server Error");
+                break;
+            case 503:
+                NSLog(@"Service Unavailable");
+                break;
+            default:
+                NSLog(@"Returned Status Code: %li", statusCode);
+                break;
+        }
+    }
+}
+
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
    
     NSDictionary* response = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+    if (response == nil) {
+        NSLog(@"No Response!");
+        // Enable the "Process" button
+        [_process setEnabled:true];
+        return;
+    }
+    
     BOOL accepted = [[response valueForKey:@"Accepted"] boolValue];
     if (accepted) {
         NSLog(@"Http status accepted");

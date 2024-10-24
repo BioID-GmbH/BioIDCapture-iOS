@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2D1AD52CCA81EF005E9258 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = FA2D1AD42CCA81EF005E9258 /* InfoPlist.strings */; };
 		FA960E892C78BA820007AE5E /* BWS3Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = FA960E882C78BA820007AE5E /* BWS3Settings.m */; };
 		FA960E8C2C78C1A30007AE5E /* BioIDHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = FA960E8B2C78C1A30007AE5E /* BioIDHelper.m */; };
 		FAA27322224E801E0070B425 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = FAA27321224E801E0070B425 /* art.scnassets */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA2D1AD32CCA81EF005E9258 /* InfoPlist.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = InfoPlist.strings; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		FA2D1AD62CCA8206005E9258 /* BioIDCapture.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BioIDCapture.entitlements; sourceTree = "<group>"; };
 		FA960E882C78BA820007AE5E /* BWS3Settings.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BWS3Settings.m; sourceTree = "<group>"; };
 		FA960E8A2C78BAA70007AE5E /* BWS3Settings.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BWS3Settings.h; sourceTree = "<group>"; };
 		FA960E8B2C78C1A30007AE5E /* BioIDHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BioIDHelper.m; sourceTree = "<group>"; };
@@ -81,6 +84,8 @@
 		FAEFCC88222EBD29008C4DF3 /* BioIDCapture */ = {
 			isa = PBXGroup;
 			children = (
+				FA2D1AD42CCA81EF005E9258 /* InfoPlist.strings */,
+				FA2D1AD62CCA8206005E9258 /* BioIDCapture.entitlements */,
 				FAEFCC89222EBD29008C4DF3 /* AppDelegate.h */,
 				FAEFCC8A222EBD29008C4DF3 /* AppDelegate.m */,
 				FAE3262B2C22D07C001BB9F2 /* PassiveViewController.h */,
@@ -171,6 +176,7 @@
 				FAA27322224E801E0070B425 /* art.scnassets in Resources */,
 				FAEFCC93222EBD2A008C4DF3 /* Assets.xcassets in Resources */,
 				FAEFCC91222EBD29008C4DF3 /* Main.storyboard in Resources */,
+				FA2D1AD52CCA81EF005E9258 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +203,15 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		FA2D1AD42CCA81EF005E9258 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				FA2D1AD32CCA81EF005E9258 /* InfoPlist.strings */,
+			);
+			name = InfoPlist.strings;
+			path = "BioID-iOS 2";
+			sourceTree = "<group>";
+		};
 		FAEFCC8F222EBD29008C4DF3 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -336,17 +351,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BioIDCapture/BioIDCapture.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BioIDCapture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bioid.mobile.BioIDCapture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Debug;
 		};
@@ -354,17 +374,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = BioIDCapture/BioIDCapture.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = BioIDCapture/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				"IPHONEOS_DEPLOYMENT_TARGET[sdk=macosx*]" = 14.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.bioid.mobile.BioIDCapture;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = YES;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				TARGETED_DEVICE_FAMILY = "1,2,6";
 			};
 			name = Release;
 		};

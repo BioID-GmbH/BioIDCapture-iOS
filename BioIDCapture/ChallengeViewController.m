@@ -71,7 +71,7 @@
     if ([[segue identifier] isEqualToString:@"showBioIDCaptureView"]) {
         BioIDCaptureViewController *viewController = [segue destinationViewController];
         
-        // Random generator based on existing challenges
+        // Random generator based on existing challengs
         uint32_t rnd = arc4random_uniform((int)[challenges count]);
         
         // Set random challenge of predefined challenges
@@ -204,6 +204,13 @@
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
    
     NSDictionary* response = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+    if (response == nil) {
+        NSLog(@"No Response!");
+        // Enable the "Process" button
+        [_process setEnabled:true];
+        return;
+    }
+    
     BOOL accepted = [[response valueForKey:@"Accepted"] boolValue];
     if (accepted) {
         NSLog(@"Http status accepted");

@@ -106,7 +106,8 @@
    if (picker.view.tag == 1)  {
        
        // Set image from ImagePickerController to ImageViewer
-       [_imageViewer1 setImage:image];
+       // Mirror the image from ImagePickerController and set to ImageViewer
+       [_imageViewer1 setImage:[BioIDHelper mirrorImage:image]];
        
        // Disable "Capture 2 photos" button
        [_captureLivePhotos setEnabled:false];
@@ -116,7 +117,8 @@
    } // Otherwise the caller is "Caputure ID photo" button
    else {
        // Set image from ImagePickerController to ImageViewer
-       [_imageViewer3 setImage:image];
+       // Mirror the image from ImagePickerController and set to ImageViewer
+       [_imageViewer3 setImage:[BioIDHelper mirrorImage:image]];
        
        // Enable the "Process" button
        [_process setEnabled:true];
@@ -281,6 +283,13 @@
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
    
     NSDictionary* response = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
+    if (response == nil) {
+        NSLog(@"No Response!");
+        // Enable the "Process" button
+        [_process setEnabled:true];
+        return;
+    }
+    
     BOOL accepted = [[response valueForKey:@"Accepted"] boolValue];
     if (accepted) {
         NSLog(@"Http status accepted");

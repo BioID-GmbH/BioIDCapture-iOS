@@ -181,6 +181,11 @@ static CGFloat DegreesToRadians(CGFloat degrees)  { return degrees * M_PI / 180;
 #endif
 }
 
+- (void)updateLayers {
+    [instructionViewBlurred setCenter:CGPointMake(self.view.bounds.size.width/2, 70)];
+    [sceneView setFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+}
+
 - (void)setLayers:(UIDeviceOrientation)deviceOrientation {
     switch (deviceOrientation) {
         case UIDeviceOrientationPortrait: {
@@ -273,6 +278,12 @@ static CGFloat DegreesToRadians(CGFloat degrees)  { return degrees * M_PI / 180;
 - (void)viewWillLayoutSubviews {
     previewLayer.frame = self.view.bounds;
     previewLayer.connection.videoOrientation = AVCaptureVideoOrientationPortrait;
+    
+#if TARGET_OS_MACCATALYST
+    // Code to include for Macos version
+    // macOS window resize
+    [self updateLayers];
+#endif
 }
 
 -(void)orientationChanged:(NSNotification *)notification {
@@ -311,9 +322,11 @@ static CGFloat DegreesToRadians(CGFloat degrees)  { return degrees * M_PI / 180;
     [captureSession beginConfiguration];
     
     // AVCaptureSessionPresetHigh - Specifies capture settings suitable for high-quality video!
-    // otherwise use AVCaptureSessionPreset640x480
     if([captureSession canSetSessionPreset:AVCaptureSessionPreset1280x720]) {
-        captureSession.sessionPreset = AVCaptureSessionPreset1280x720;
+       captureSession.sessionPreset = AVCaptureSessionPreset1280x720;
+    }
+    else {   // otherwise use AVCaptureSessionPreset640x480
+        captureSession.sessionPreset = AVCaptureSessionPreset640x480;
     }
     
     [captureSession addInput:input];
@@ -432,7 +445,13 @@ static CGFloat DegreesToRadians(CGFloat degrees)  { return degrees * M_PI / 180;
             exifOrientation = kCGImagePropertyOrientationUp;
             break;
         }
+        case UIDeviceOrientationUnknown: {
+            imageOrientation = UIImageOrientationUp;
+            exifOrientation = kCGImagePropertyOrientationUp;
+            break;
+        }
         case UIDeviceOrientationPortrait:
+        case UIDeviceOrientationFaceUp:
             // ** Fall-through **
         default:
             // Device oriented vertically, home button on the bottom
@@ -562,7 +581,7 @@ static CGFloat DegreesToRadians(CGFloat degrees)  { return degrees * M_PI / 180;
 }
 
 - (UIImage *)scaleAndRotateImage:(UIImage *)image {
-    int kMaxResolution = 640;
+    int kMaxResolution = 1600;
     
     CGImageRef imgRef = image.CGImage;
     
@@ -945,7 +964,7 @@ static CGFloat DegreesToRadians(CGFloat degrees)  { return degrees * M_PI / 180;
     else if([direction isEqualToString:@"right"]) {
         action = [SCNAction rotateByX:0 y:0.2 z:0 duration:1.0];
     }
-    NSLog(@"%@", direction);    
+    NSLog(@"%@", direction);
     [headNode runAction:action];
 }
 

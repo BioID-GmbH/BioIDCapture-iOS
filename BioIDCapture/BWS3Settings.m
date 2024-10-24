@@ -8,7 +8,9 @@
 #import <Foundation/Foundation.h>
 
 // Please set the endpoint and ApiKey of the test server (GitHub: BioID.RestGrpcForwarder)
-NSString * const BWS3_REST_GRPC_ENDPOINT =  @"http://:5226"; 
+// Execute this code as a macOS app (Mac Catalyst) to reach the test server (RestGrpcForwarder) at localhost.
+// The default value is localhost without https.
+NSString * const BWS3_REST_GRPC_ENDPOINT =  @"http://localhost:5226";
 NSString * const BWS3_REST_GRPC_APIKEY = @"HwYrknSCZWPuIXX2B6Gg6Z7HjwR4WqdZ";
 
 // Biometric tasks

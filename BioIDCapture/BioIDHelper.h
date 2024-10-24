@@ -1,4 +1,4 @@
-//
+///
 //  BioIDHelper.h
 //  BioIDCapture
 //
