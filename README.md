@@ -46,10 +46,10 @@ The values for the app and the server are already set by default and can be chan
 You must make the following settings in the `BWS3Settings.m` file in order to access the server:
 - `BWS3_REST_GRPC_ENDPOINT`
 
-> [NOTE] 
+> ### NOTE 
 > Depending on where the server is started, the URL is different. For example, you can make the server publicly available with TLS (different port than without TLS).
 > 
-> Or you can host the server directly on the macOS system on which the app is started. For this use case, follow the steps in the article [Accessing your macbook's localhost on your iPhone][ArticleLocalHostAndiPhone].
+> Or you can host the server directly on the macOS system on which the application is started. For this use case, start the code as a macOS app (Mac Catalyst). The server can then be accessed via http://localhost:5226 (default value).
 
 ## How the app works
 The app offers 4 different biometric functions.
