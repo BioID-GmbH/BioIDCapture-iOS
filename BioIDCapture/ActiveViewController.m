@@ -225,4 +225,20 @@
     [_process setEnabled:true];
 }
 
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend {
+}
+
+- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
+    if (error) {
+        NSLog(@"Connection error: %@", error.localizedDescription);
+        // Enable the "Process" button
+        [_process setEnabled:true];
+    }
+}
+
+- (void)URLSession:(NSURLSession *)session didBecomeInvalidWithError:(nullable NSError *)error {
+    if (error) { }
+    [session finishTasksAndInvalidate];
+}
+
 @end

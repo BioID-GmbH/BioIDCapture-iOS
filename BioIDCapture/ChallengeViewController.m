@@ -239,6 +239,8 @@
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
     if (error) {
         NSLog(@"Connection error: %@", error.localizedDescription);
+        // Enable the "Process" button
+        [_process setEnabled:true];
     }
 }
 
