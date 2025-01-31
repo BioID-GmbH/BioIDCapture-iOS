@@ -1,4 +1,4 @@
-# BioIDCapture-iOS
+# BioIDCapture iOS App: Liveness Detection & ID photo verification
 
 ## Overview
 
