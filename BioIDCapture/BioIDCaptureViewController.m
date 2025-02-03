@@ -484,6 +484,7 @@ static CGFloat DegreesToRadians(CGFloat degrees)  { return degrees * M_PI / 180;
             // Do 3D head action
             [self show3DHeadLayer];
             if ([self.challengeTag length] > 0) {
+                NSLog(@"------------ SET Challenge direction -------------");
                 [self showInstructionLayer:BIOID_INSTRUCTION_CHALLENGE];
                 [self createActionForChallenge:self.challengeTag];
             }
@@ -948,23 +949,25 @@ static CGFloat DegreesToRadians(CGFloat degrees)  { return degrees * M_PI / 180;
 
 - (void)createActionForChallenge:(NSString *)direction {
     [self createSceneView];
-    
     SCNAction *action = nil;
    
     // Create direction for 3D Head
     if([direction isEqualToString:@"up"]) {
         action = [SCNAction rotateByX:-0.2 y:0 z:0 duration:1.0];
+        NSLog(@"Move head upwards");
     }
     else if([direction isEqualToString:@"down"]) {
         action = [SCNAction rotateByX:0.2 y:0 z:0 duration:1.0];
+        NSLog(@"Move head downwards");
     }
     else if([direction isEqualToString:@"left"]) {
         action = [SCNAction rotateByX:0 y:-0.2 z:0 duration:1.0];
+        NSLog(@"Move head to the left");
     }
     else if([direction isEqualToString:@"right"]) {
         action = [SCNAction rotateByX:0 y:0.2 z:0 duration:1.0];
+        NSLog(@"Move head to the right");
     }
-    NSLog(@"%@", direction);
     [headNode runAction:action];
 }
 

@@ -21,7 +21,7 @@
     
     // Create array for possible challenges
     challenges = [NSArray arrayWithObjects:
-                  @"Up",
+                  @"up",
                   @"down",
                   @"left",
                   @"right",
@@ -69,13 +69,13 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     if ([[segue identifier] isEqualToString:@"showBioIDCaptureView"]) {
-        BioIDCaptureViewController *viewController = [segue destinationViewController];
-        
         // Random generator based on existing challengs
         uint32_t rnd = arc4random_uniform((int)[challenges count]);
         
         // Set random challenge of predefined challenges
         currentChallenge = [challenges objectAtIndex:rnd];
+        
+        BioIDCaptureViewController *viewController = [segue destinationViewController];
         viewController.challengeTag = currentChallenge;
         viewController.callback = self;
     }
