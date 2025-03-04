@@ -79,8 +79,19 @@ static CGFloat DegreesToRadians(CGFloat degrees)  { return degrees * M_PI / 180;
     dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
         [self.captureSession startRunning];
     });
-   
-    [self start];
+    
+    // Display note before starting!
+    UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Are you ready?"
+                                                                             message:@"Keep the phone stable and only move your head,"
+                                                                      preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* ready = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+        // start biometric task
+        [self start];
+    }];
+    
+    [alertController addAction:ready];
+    [self presentViewController:alertController animated:YES completion:nil];
     [super viewDidAppear:TRUE];
 }
 
