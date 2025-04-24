@@ -979,7 +979,9 @@ static CGFloat DegreesToRadians(CGFloat degrees)  { return degrees * M_PI / 180;
         action = [SCNAction rotateByX:0 y:0.2 z:0 duration:1.0];
         NSLog(@"Move head to the right");
     }
-    [headNode runAction:action];
+    if (action != nil) {
+        [headNode runAction:action];
+    }
 }
 
 @end

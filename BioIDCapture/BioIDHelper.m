@@ -231,17 +231,20 @@
         NSLog(@"PNG Base64 Size: %.f KB", (float)[base64IdPhoto lengthOfBytesUsingEncoding:NSUTF8StringEncoding]/1024.0f);
     }
     
-    // Create final json object
-    NSDictionary *jsonObject = @{@"liveImages": liveImages, @"photo": base64IdPhoto}; //, @"disableLivenessDetection": disable};
-    
-    // Serialize to json format
-    NSError *error;
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonObject options:0 error:&error];
-    if (error != nil) {
-        NSLog(@"Error creating JSON Request Body: %@", error);
+    if (liveImages != nil && base64IdPhoto != nil) {
+        // Create final json object
+        NSDictionary *jsonObject = @{@"liveImages": liveImages, @"photo": base64IdPhoto}; //, @"disableLivenessDetection": disable};
+        
+        // Serialize to json format
+        NSError *error;
+        NSData *jsonData = [NSJSONSerialization dataWithJSONObject:jsonObject options:0 error:&error];
+        if (error != nil) {
+            NSLog(@"Error creating JSON Request Body: %@", error);
+        }
+
+        return jsonData;
     }
-    
-    return jsonData;
+    return nil;
 }
 
 @end
