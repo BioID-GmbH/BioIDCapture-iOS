@@ -571,11 +571,22 @@ static CGFloat DegreesToRadians(CGFloat degrees)  { return degrees * M_PI / 180;
     // Create a device-dependent RGB color space
     CGColorSpaceRef colorSpace = CGColorSpaceCreateDeviceRGB();
     
+    CGBitmapInfo bitmapInfo = kCGBitmapByteOrder32Little | (CGBitmapInfo)kCGImageAlphaPremultipliedFirst;
+    
     // Create a bitmap graphics context with the sample buffer data
-    CGContextRef context = CGBitmapContextCreate(baseAddress, width, height, 8,
-                                                 bytesPerRow, colorSpace, kCGBitmapByteOrder32Little | kCGImageAlphaPremultipliedFirst);
+    CGContextRef context = CGBitmapContextCreate(
+        baseAddress,
+        width,
+        height,
+        8,
+        bytesPerRow,
+        colorSpace,
+        bitmapInfo
+    );
+    
     // Create a Quartz image from the pixel data in the bitmap graphics context
     CGImageRef quartzImage = CGBitmapContextCreateImage(context);
+    
     // Unlock the pixel buffer
     CVPixelBufferUnlockBaseAddress(imageBuffer,0);
     
