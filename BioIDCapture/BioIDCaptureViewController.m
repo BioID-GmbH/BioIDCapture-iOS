@@ -82,7 +82,7 @@ static CGFloat DegreesToRadians(CGFloat degrees)  { return degrees * M_PI / 180;
     
     // Display note before starting!
     UIAlertController* alertController = [UIAlertController alertControllerWithTitle:@"Are you ready?"
-                                                                             message:@"Keep the phone stable and only move your head,"
+                                                                             message:@"Please keep your device steady while moving only your head."
                                                                       preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction* ready = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
